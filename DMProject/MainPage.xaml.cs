@@ -4,6 +4,7 @@
     {
         int isOutputVisible; // for managing the output box visibility
         public MainPage() 
+
         {
             InitializeComponent();
         }

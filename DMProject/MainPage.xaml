@@ -49,7 +49,6 @@
                 AutoSize="TextChanges"
                 HeightRequest="150"/>
 
-
         </VerticalStackLayout>
     </ScrollView>
 
