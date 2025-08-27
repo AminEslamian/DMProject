@@ -17,15 +17,38 @@
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
+
+            <VerticalStackLayout>
             <!--    INPUT BOX     -->
-            <Label Text="Enter your message:" 
-            FontSize="18"/>
-            <Editor x:Name="messageEditor" 
-            Placeholder="Type your message..." 
-            AutoSize="TextChanges"
-            HeightRequest="100"/>
-            <Button Text="Send" Clicked="OnSendClicked"/>
+                    
+                    <Button Text="Theme" Clicked="OnChangeThemeClicked" HorizontalOptions="End" BackgroundColor="DarkOliveGreen"/>
+
+                        <Label Text="input:" 
+                        FontSize="14"/>
+
+                        <Editor x:Name="messageEditor" 
+                        Placeholder="Type your message..." 
+                        AutoSize="TextChanges"
+                        HeightRequest="200"
+                        />
+
+                        <Button Text="Send" Clicked="OnSendClicked"/>
+            </VerticalStackLayout>
             
+                <!-- control buttons  -->
+                <VerticalStackLayout>
+                    
+                </VerticalStackLayout>
+
+            <!--    OUTPUT BOX     -->
+            <Label Text="output:" 
+                   FontSize="14"/>
+
+            <Editor x:Name="outputEditor" 
+                IsReadOnly="True" 
+                AutoSize="TextChanges"
+                HeightRequest="150"/>
+
         </VerticalStackLayout>
     </ScrollView>
 
