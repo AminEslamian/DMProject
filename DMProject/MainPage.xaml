@@ -18,15 +18,11 @@
                 SemanticProperties.HeadingLevel="Level1" />
 
 
-            <HorizontalStackLayout Spacing="5" Padding="5">
+            <VerticalStackLayout>
             <!--    INPUT BOX     -->
-
-                <VerticalStackLayout>
                     
-                    <Button Text="Theme" Clicked="OnChangeThemeClicked"/>
-                </VerticalStackLayout>
-                
-                    <VerticalStackLayout>
+                    <Button Text="Theme" Clicked="OnChangeThemeClicked" HorizontalOptions="End" BackgroundColor="DarkOliveGreen"/>
+
                         <Label Text="input:" 
                         FontSize="14"/>
 
@@ -34,17 +30,16 @@
                         Placeholder="Type your message..." 
                         AutoSize="TextChanges"
                         HeightRequest="200"
-                        WidthRequest="200"/>
+                        />
 
                         <Button Text="Send" Clicked="OnSendClicked"/>
-                    </VerticalStackLayout>
+            </VerticalStackLayout>
+            
                 <!-- control buttons  -->
                 <VerticalStackLayout>
                     
                 </VerticalStackLayout>
-                
-            </HorizontalStackLayout>
-            
+
             <!--    OUTPUT BOX     -->
             <Label Text="output:" 
                    FontSize="14"/>

@@ -2,7 +2,7 @@
 {
     public partial class MainPage : ContentPage
     {
-        int themeValue; // 0 = dark mode, 1 = light mode
+        int isOutputVisible; // for managing the output box visibility
         public MainPage() 
         {
             InitializeComponent();
