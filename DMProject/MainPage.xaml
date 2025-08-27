@@ -18,11 +18,16 @@
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
-            <Label
-                Text="Welcome to &#10;.NET Multi-platform App UI"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+            <? -- INPUT BOX -- ?>
+            <Label Text="Enter your message:" 
+            FontSize="18"/>
+            <Editor x:Name="messageEditor" 
+            Placeholder="Type your message..." 
+            AutoSize="TextChanges"
+            HeightRequest="100"/>
+            <Button Text="Send" Clicked="OnSendClicked"/>
+            
+
 
             <Button
                 x:Name="CounterBtn"
