@@ -29,17 +29,17 @@
                         HeightRequest="200"
                         />
 
-                        <Button Text="Send" Clicked="OnSendClicked"/>
+                        <Button Text="Submit" Clicked="OnSendClicked"/>
             </VerticalStackLayout>
             
                 <!-- control buttons  -->
-            <VerticalStackLayout>
+            <HorizontalStackLayout>
 
                 <Button Text="Question No." Clicked="onChangedQuestion" Background="#556B2F"/>
 
                 <Button Text="Paste TestCase" Clicked="onPastedQuestion" Background="#808000"/>
 
-            </VerticalStackLayout>
+            </HorizontalStackLayout>
 
             <!--    OUTPUT BOX     -->
             <Label Text="output:" 
