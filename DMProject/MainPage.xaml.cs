@@ -66,6 +66,30 @@
         }
 
 
+        private void OnExitClicked(object sender, EventArgs e)
+        {
+        #if ANDROID
+            Android.OS.Process.KillProcess(Android.OS.Process.MyPid()); 
+        #elif IOS
+            // Apple discourages programmatic exit — you can only send app to background:
+            UIKit.UIApplication.SharedApplication.PerformSelector(
+                new ObjCRuntime.Selector("suspend"), null, 0);
+        #elif WINDOWS
+            Application.Current.Quit(); 
+        #elif MACCATALYST
+                    Application.Current.Quit();
+        #endif
+        }
+
+        private void OnResetClicked(object sender, EventArgs e)
+        {
+        #if WINDOWS || MACCATALYST
+                    var exePath = Environment.ProcessPath;
+                    System.Diagnostics.Process.Start(exePath);
+                    Application.Current.Quit();
+        #endif
+        }
+
 
         private void OnChangeThemeClicked(object sender, EventArgs e)
         {

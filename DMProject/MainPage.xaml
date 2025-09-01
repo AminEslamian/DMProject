@@ -41,6 +41,10 @@
 
                 <Button x:Name="clearButton" Text="Clear" IsEnabled="False" Clicked="onClearInputClicked" Background="#BDB76B"/>
 
+                <Button Text="Close" Clicked="OnExitClicked" Background="#F0E68C"/>
+
+                <Button Text="Reset" Clicked="OnResetClicked" Background="#EEE8AA"/>
+
             </HorizontalStackLayout>
 
             <!--    OUTPUT BOX     -->
