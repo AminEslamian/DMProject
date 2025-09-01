@@ -36,9 +36,13 @@
             </VerticalStackLayout>
             
                 <!-- control buttons  -->
-                <VerticalStackLayout>
-                    
-                </VerticalStackLayout>
+            <VerticalStackLayout>
+
+                <Button Text="Question No." Clicked="onChangedQuestion" Background="OliveDrab"/>
+                
+                
+
+            </VerticalStackLayout>
 
             <!--    OUTPUT BOX     -->
             <Label Text="output:" 
