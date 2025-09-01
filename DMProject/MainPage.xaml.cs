@@ -12,9 +12,6 @@
 
         private void OnSendClicked(object sender, EventArgs e)
         {
-            
-            
-
             string message = messageEditor.Text;
             // Manage the input here => probably the function:
             // --
@@ -22,6 +19,12 @@
             outputEditor.Text = "Output: " + message; // Just an example of output
 
         }
+        private void OnMessageEditorTextChanged(object sender, TextChangedEventArgs e)
+        {
+            // Enable submit only if text is not empty/whitespace
+            submitButton.IsEnabled = !string.IsNullOrWhiteSpace(e.NewTextValue);
+        }
+
 
         private void onChangedQuestion(object sender, EventArgs e)
         {
@@ -55,6 +58,12 @@
             else throw new ArgumentException("unexcpected question no.");
 
         }
+
+        private void onClearInputClicked(object sender, EventArgs e)
+        {
+            messageEditor.Text = "";
+        }
+
 
 
         private void OnChangeThemeClicked(object sender, EventArgs e)

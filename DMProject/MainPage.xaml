@@ -27,9 +27,9 @@
                         Placeholder="Type your message..." 
                         AutoSize="TextChanges"
                         HeightRequest="200"
-                        />
+                        TextChanged="OnMessageEditorTextChanged"/>
 
-                        <Button Text="Submit" Clicked="OnSendClicked"/>
+                        <Button x:Name="submitButton" IsEnabled="False" Text="Submit" Clicked="OnSendClicked"/>
             </VerticalStackLayout>
             
                 <!-- control buttons  -->
@@ -38,6 +38,8 @@
                 <Button Text="Question No." Clicked="onChangedQuestion" Background="#556B2F"/>
 
                 <Button Text="Paste TestCase" Clicked="onPastedQuestion" Background="#808000"/>
+
+                <Button Text="Clear" Clicked="onClearInputClicked" Background="#BDB76B"/>
 
             </HorizontalStackLayout>
 
