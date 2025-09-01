@@ -6,11 +6,7 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+            
 
             <Label
                 Text="DM App!"
@@ -23,22 +19,51 @@
                     
                     <Button Text="Theme" Clicked="OnChangeThemeClicked" HorizontalOptions="End" BackgroundColor="DarkOliveGreen"/>
 
-                        <Label Text="input:" 
+                        <Label x:Name="headerLable"
+                        Text="Input: The least number of train stations"
                         FontSize="14"/>
 
                         <Editor x:Name="messageEditor" 
                         Placeholder="Type your message..." 
                         AutoSize="TextChanges"
                         HeightRequest="200"
-                        />
+                        TextChanged="OnMessageEditorTextChanged"/>
 
-                        <Button Text="Send" Clicked="OnSendClicked"/>
+                        <Button x:Name="submitButton" IsEnabled="False" Text="Submit" Clicked="OnSendClicked"/>
             </VerticalStackLayout>
             
                 <!-- control buttons  -->
-                <VerticalStackLayout>
-                    
-                </VerticalStackLayout>
+            <Grid ColumnDefinitions="*,*,*,*,*"
+             ColumnSpacing="5">
+
+                    <Button Text="Question No." 
+                Clicked="onChangedQuestion" 
+                Background="#556B2F"
+                Grid.Column="0"/>
+
+                    <Button Text="Paste TestCase" 
+                Clicked="onPastedQuestion" 
+                Background="#808000"
+                Grid.Column="1"/>
+
+                    <Button x:Name="clearButton" 
+                Text="Clear" 
+                IsEnabled="False" 
+                Clicked="onClearInputClicked" 
+                Background="#BDB76B"
+                Grid.Column="2"/>
+
+                    <Button Text="Close" 
+                Clicked="OnExitClicked" 
+                Background="#F0E68C"
+                Grid.Column="3"/>
+
+                    <Button Text="Reset" 
+                Clicked="OnResetClicked" 
+                Background="#EEE8AA"
+                Grid.Column="4"/>
+            </Grid>
+
 
             <!--    OUTPUT BOX     -->
             <Label Text="output:" 
