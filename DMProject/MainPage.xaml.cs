@@ -23,6 +23,7 @@
         {
             // Enable submit only if text is not empty/whitespace
             submitButton.IsEnabled = !string.IsNullOrWhiteSpace(e.NewTextValue);
+            clearButton.IsEnabled = !string.IsNullOrWhiteSpace(e.NewTextValue);
         }
 
 

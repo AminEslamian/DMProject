@@ -39,7 +39,7 @@
 
                 <Button Text="Paste TestCase" Clicked="onPastedQuestion" Background="#808000"/>
 
-                <Button Text="Clear" Clicked="onClearInputClicked" Background="#BDB76B"/>
+                <Button x:Name="clearButton" Text="Clear" IsEnabled="False" Clicked="onClearInputClicked" Background="#BDB76B"/>
 
             </HorizontalStackLayout>
 
