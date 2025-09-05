@@ -1,4 +1,6 @@
-﻿namespace DMProject
+﻿// IMPORTANT: Used GPT for writing the logic of the fucntions (how to solve questions)
+
+namespace DMProject
 {
     public partial class MainPage : ContentPage
     {
